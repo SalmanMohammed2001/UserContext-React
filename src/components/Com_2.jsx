@@ -1,12 +1,17 @@
+import { useContext } from "react";
 import Com_3 from "./Com_3";
+import { userAuth } from "../App";
 
-// eslint-disable-next-line react/prop-types
-const Com_2=({username,setUsername})=>{
+
+const Com_2=()=>{
+
+  const{username} =useContext(userAuth)
+  
     return(
   <div>
       <h1>Com_2 <span>{username}</span></h1>
 
-      <Com_3  username={username} setUsername={setUsername}/>
+      <Com_3/>
   </div>
     )
 }

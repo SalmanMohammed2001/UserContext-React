@@ -1,10 +1,11 @@
 import Com_2 from "./Com_2";
 
-const Com_1=()=>{
+// eslint-disable-next-line react/prop-types
+const Com_1=({username,setUsername})=>{
     return(
         <div>
-            Com_1
-            <Com_2/>
+            <h1>Com_1 <span>{username}</span></h1>
+            <Com_2  username={username} setUsername={setUsername}/>
         </div>
     )
 }
